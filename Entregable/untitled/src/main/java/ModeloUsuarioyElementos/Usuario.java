@@ -1,4 +1,4 @@
-package ModeloUsuario;
+package ModeloUsuarioyElementos;
 
 public abstract class Usuario implements AccionesUsuario {
     private String nombreCompleto;
@@ -18,7 +18,6 @@ public abstract class Usuario implements AccionesUsuario {
     public String getNombreCompleto() {
         return nombreCompleto;
     }
-
     public void setNombreCompleto(String nombreCompleto) {
         this.nombreCompleto = nombreCompleto;
     }
@@ -26,7 +25,6 @@ public abstract class Usuario implements AccionesUsuario {
     public int getEdad() {
         return edad;
     }
-
     public void setEdad(int edad) {
         this.edad = edad;
     }
@@ -34,7 +32,6 @@ public abstract class Usuario implements AccionesUsuario {
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -42,7 +39,6 @@ public abstract class Usuario implements AccionesUsuario {
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }

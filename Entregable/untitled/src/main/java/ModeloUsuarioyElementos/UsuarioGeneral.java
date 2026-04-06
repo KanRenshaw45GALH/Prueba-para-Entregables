@@ -1,36 +1,38 @@
-package ModeloUsuario;
+package ModeloUsuarioyElementos;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
-public class UsuarioPremium extends Usuario {
+public class UsuarioGeneral extends Usuario{
     //Atributos
     private float pagarSuscripcion;
-    private boolean activarSuscripcion = true;
-    private boolean accesoCompleto = true;
+    private boolean activarSuscripcion = false;
+    private boolean accesoCompleto = false;
     private boolean compartirElemento = true;
 
+
+    private int limiteElementosTareas = 8;
+    private int limiteElementosRecordatorios = 14;
+    private int limiteElementosCompartidos = 10;
     private LocalDate fechaActual = LocalDate.now();
     private DateTimeFormatter fechaSuscripcion = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     private DateTimeFormatter fechaLimiteSuscripcion = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    //Construtor Parametrizado
-    public UsuarioPremium(String nombreCompleto, int edad, String email, String password, float pagarSuscripcion, boolean activarSuscripcion, boolean accesoCompleto, boolean compartirElemento, LocalDate fechaActual, DateTimeFormatter fechaSuscripcion, DateTimeFormatter fechaLimiteSuscripcion) {
-        super(nombreCompleto, edad, email, password);
+
+    //Constructor Parametrizado
+    public UsuarioGeneral(String nombreCompleto, int edad, String email, String password, float pagarSuscripcion, boolean activarSuscripcion, boolean accesoCompleto, boolean compartirElemento, LocalDate fechaActual, DateTimeFormatter fechaSuscripcion, DateTimeFormatter fechaLimiteSuscripcion) {
+        super(nombreCompleto,edad,email,password);
         this.pagarSuscripcion = pagarSuscripcion;
         this.activarSuscripcion = activarSuscripcion;
         this.accesoCompleto = accesoCompleto;
+        this.compartirElemento = compartirElemento;
         this.fechaActual = fechaActual;
         this.fechaSuscripcion = fechaSuscripcion;
         this.fechaLimiteSuscripcion = fechaLimiteSuscripcion;
 
     }
-    //Metodos Propios:
 
 
-
-
-    //Metodos Heredados
     @Override
     public void verificarUsuario() {
         if (getPassword() == getPassword()) {

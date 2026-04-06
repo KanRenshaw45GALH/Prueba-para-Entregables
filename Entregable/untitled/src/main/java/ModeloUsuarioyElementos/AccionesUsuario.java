@@ -1,4 +1,4 @@
-package ModeloUsuario;
+package ModeloUsuarioyElementos;
 
 public interface AccionesUsuario {
 
