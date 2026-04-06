@@ -23,7 +23,7 @@ public class UsuarioGeneral extends Usuario{
     public UsuarioGeneral(String nombreCompleto, int edad, String email, String password, float pagarSuscripcion, boolean activarSuscripcion, boolean accesoCompleto, boolean compartirElemento, LocalDate fechaActual, DateTimeFormatter fechaSuscripcion, DateTimeFormatter fechaLimiteSuscripcion) {
         super(nombreCompleto,edad,email,password);
         this.pagarSuscripcion = pagarSuscripcion;
-        this.activarSuscripcion = activarSuscripcion;
+        this.activarSuscripcion= activarSuscripcion;
         this.accesoCompleto = accesoCompleto;
         this.compartirElemento = compartirElemento;
         this.fechaActual = fechaActual;
@@ -61,6 +61,18 @@ public class UsuarioGeneral extends Usuario{
         System.out.println("Suscripcion: " + pagarSuscripcion() + " pagada   correctamente. ");
         return 0;
     }
+
+   public boolean cambiarSuscripcion(){
+        if(activarSuscripcion){
+            System.out.println("La suscripcion ya esta activa");
+            return false;
+        }
+        activarSuscripcion = true;
+        accesoCompleto = true;
+
+        System.out.println("La suscripcion fue activada correctamente");
+        return true;
+   }
 
 
 }

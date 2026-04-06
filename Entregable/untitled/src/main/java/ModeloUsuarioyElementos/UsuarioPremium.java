@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class UsuarioPremium extends Usuario {
     //Atributos
     private float pagarSuscripcion;
-    private boolean activarSuscripcion = true;
+    private boolean activarSuscripcion;
     private boolean accesoCompleto = true;
     private boolean compartirElemento = true;
 
@@ -60,5 +60,22 @@ public class UsuarioPremium extends Usuario {
         return 0;
     }
 
+    public void activarSuscripcion() {
+        activarSuscripcion = true;
+        accesoCompleto = true;
+    }
+
+    public boolean cancelarSuscripcion(){
+        if(!activarSuscripcion){
+            System.out.println("La suscripcion ya fue cancelada");
+            return false;
+        }
+
+        activarSuscripcion = false;
+        accesoCompleto = false;
+
+        System.out.println("Suscripcion cancelada correctamente");
+        return true;
+    }
 
 }

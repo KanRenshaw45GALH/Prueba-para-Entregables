@@ -10,6 +10,5 @@ public class ElementoTarea extends Elemento {
 
     public ElementoTarea(int id, String titulo, String descripcion, int cantidadColaboradores, Prioridad prioridad, Estado estado, DateTimeFormatter fechaCreacion, DateTimeFormatter fechaLimite) {
         super(id, titulo, descripcion, cantidadColaboradores, prioridad, fechaCreacion, fechaLimite);
-        this.es
     }
 }
